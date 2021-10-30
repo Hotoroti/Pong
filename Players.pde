@@ -29,10 +29,10 @@ class Player {
     }
 
     //Movement PlayerRight
-    if (keysPressed['o']) {
+    if (keysPressed[UP]) {
       PlayerRightY -= PlayerSpeed;
     }oko
-    if (keysPressed['k']) {
+    if (keysPressed[DOWN]) {
       PlayerRightY += PlayerSpeed;
     }
 
