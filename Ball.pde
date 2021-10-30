@@ -37,11 +37,13 @@ class Ball {
     //Collision with PlayerRight
     if (BallX >= thePlayer.PlayerRightX && BallX <= thePlayer.PlayerRightX + thePlayer.PlayerWidth && BallY >= thePlayer.PlayerRightY && BallY <= thePlayer.PlayerRightY + thePlayer.PlayerHeight) {
       BallSpeedX *= -1;
+      bounce.play();
     }
 
     //Collision with PlayerLeft
     if (BallX >= thePlayer.PlayerLeftX && BallX <= thePlayer.PlayerLeftX + thePlayer.PlayerWidth && BallY >= thePlayer.PlayerLeftY && BallY <= thePlayer.PlayerLeftY + thePlayer.PlayerHeight) {
       BallSpeedX *= -1;
+      bounce.play();
     }
   }
 
