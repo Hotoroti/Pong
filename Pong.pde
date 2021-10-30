@@ -1,38 +1,5 @@
-Player thePlayer;
-Ball theBall;
-Score theScore;
-
-final int KEY_LIMIT = 1024;
-boolean[] keysPressed = new boolean[KEY_LIMIT];
-
-void setup() {
-  size(1000, 600);
-
-  thePlayer = new Player();
-  theBall = new Ball();
-  theScore = new Score();
-}
-
-void updateGame() {
-  thePlayer.update();
-  theBall.update();
-  theScore.update();
-}
-
-void drawingGame() {
-  background(0);
-  thePlayer.draw();
-  theBall.draw();
-  theScore.draw();
-}
-
-
-
-//--------------------------------------------------------------------------------------------------
-void draw() {
-  drawingGame();
-  updateGame();
-}
+import processing.sound.*;
+SoundFile bounce;
 
 Player thePlayer;
 Ball theBall;
@@ -47,6 +14,7 @@ void setup() {
   thePlayer = new Player();
   theBall = new Ball();
   theScore = new Score();
+  bounce = new SoundFile(this, "bounce.wav");
 }
 
 void updateGame() {
